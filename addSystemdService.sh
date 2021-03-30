@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat > "/lib/systemd/system/teamspeak.service" <<- EOM
+cat > "/lib/systemd/system/teamspeak.service" <<- EOF
 [Unit]
 Description=TeamSpeak Server
 After=network.target
@@ -19,7 +19,7 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-EOM
+EOF
 
 # Reload the systemd manager configuration
 systemctl --system daemon-reload
