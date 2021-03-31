@@ -34,10 +34,10 @@ Vagrant.configure("2") do |config|
     # Assign IP via DHCP
     i.vm.network "public_network"
     # Install TeamSpeak server
-    i.vm.provision "shell", path: "./installApp.sh"
+    i.vm.provision "shell", path: "scripts/installApp.sh"
     # Set TeamSpeak service into systemd and start it
-    i.vm.provision "shell", path: "./addSystemdService.sh"
+    i.vm.provision "shell", path: "scripts/addSystemdService.sh"
     # Create TeamSpeak service into firewalld
-    i.vm.provision "shell", path: "./addFirewalldService.sh"
+    i.vm.provision "shell", path: "scripts/addFirewalldService.sh"
   end
 end
