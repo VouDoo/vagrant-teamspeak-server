@@ -18,6 +18,7 @@
 # Use the following command to spin up the boxes:
 #   vagrant up
 
+
 Vagrant.configure("2") do |config|
   # Provision TeamSpeak server instance
   config.vm.define "ts-server-instance" do |i|
